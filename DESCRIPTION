@@ -1,0 +1,10 @@
+Package: ShoeSampleData
+Type: Package
+Title: Images of Shoes From Longitudinal Wear Study
+Version: 0.1.0
+Authors@R: person("Susan", "Vanderplas", role = c("aut", "cre"), email = "srvander@iastate.edu")
+Description: Contains images from a longitudinal study of shoe wear. This 
+    package is only to serve as a mechanism for distributing the data.
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 6.1.0
