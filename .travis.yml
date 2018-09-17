@@ -1,6 +1,9 @@
 language: R
 sudo: false
 cache: packages
+before_install:
+  - sudo apt-get install -y libxml2-dev libgit2-dev
+  - Rscript -e 'install.packages("drat")'
 env:
   global:
     secure: IiN8YQjTIz4TRPCinE3toZegD3cgSjdwR11zg1xt7qJG7H0waVV4PJVCyY5ErsFfof8W0jm0dhWRfPdSp4I3Kf9VrhCapc3ifbC+0bBNbgExeFJQcTgYwr9OUbEb8pxOEr7W+ht3u2J7EpVgXnm9wEgidOJGGrVsuH295SaiRd6L/SoMh4VnBUAsPIztScqII063DYIiEfG+c3TtG0+YBJ7thz+DN3Wtn/5KQ22WPgSiQO+cLMIy8oC2AIB/dJ9M7uMQAv9SkK23lkTPeTe0fIQXK4SQVGpQsmY/1LMs3zhu1VRqN9LA+3SvVLTjPtdG74jEuzna1FldMDvWgE8OO3Uwwpi/LQE/Opw+nCLwBq59qagvgWcArEx1GIcybaXH2vrPiAUuDah4ELHTCwvU1m8mSX0YsoSloOFhYFTPbxRDoVuW21tfKM+rBlPzpPgNLV0Lb47N1xwUg6ybOMm9hbyscpY0Krzmt8KQWaXnNYPrbEErR6MgrDbGcS2liLqKmqqmmXKH1LjcewDY+dQ2uLrBuxPGRe2cKIDdy84Dc9ncr9O9Ggwt6tw02s7ysbK9n1AQwYjmgeH6nBaStigvTq5gWxYo1Jjbwqb+pcemsJwdHE6/yDxs+iUsnfAVcl4Yv3ORh/U5NzoocBLOzRMw/WxuNaybe67A2HmrqRtUQoA=
