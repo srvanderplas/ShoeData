@@ -22,7 +22,8 @@ tmp2 <- filter(filedf, n == 16) %>%
  unnest()
 
 tmp <- bind_rows(tmp, tmp2)
+tmp$indiv <- sprintf("person%d", as.numeric(factor(tmp$ScannerID)))
 
-tmp$filenew <- str_replace(tmp$file, "_csafe_.*.tiff", "_csafe_xxxxxx.tiff")
+tmp$filenew <- str_replace(tmp$file, tmp$ScannerID, tmp$indiv)
 file.copy(from = file.path("/myfiles/las/research/csafe/ShoeImagingPermanent/", tmp$file),
           to = file.path(path, tmp$filenew))
