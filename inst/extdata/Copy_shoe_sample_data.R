@@ -25,5 +25,8 @@ tmp <- bind_rows(tmp, tmp2)
 tmp$indiv <- sprintf("person%d", as.numeric(factor(tmp$ScannerID)))
 
 tmp$filenew <- str_replace(tmp$file, tmp$ScannerID, tmp$indiv)
+tmp <- filter(tmp, LR == "L") %>%
+  ungroup() %>%
+  filter(row_number() <= 16)
 file.copy(from = file.path("/myfiles/las/research/csafe/ShoeImagingPermanent/", tmp$file),
           to = file.path(path, tmp$filenew))
